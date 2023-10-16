@@ -1,0 +1,56 @@
+<h1>Getting Started with Git and Github</h1>
+<p>This guide helps you install and get started with Git and Github.</p>
+<p>Using Git is essential for version control and collaboration in software development. It allows multiple developers to work on the same project simultaneously without conflicts and helps track changes over time. GitHub is the premier online Git collaboration platform. Its importance in a personal portfolio lies in showcasing your ability to work collaboratively on projects, giving potential employers or collaborators an insight into your abilities.</p>
+<h1>Git Installation</h1>
+<p>Git is a version control software that lets people keep track of changes to their work and incorporate changes from others easily. It runs on your laptop, and while there are apps that let you manage Git, it's best understood by using the command line.</p>
+<h2>Windows</h2>
+<p>Please download the Git installer from this link:<strong><a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></strong>. You'll want to select <strong>64-bit Git for Windows Setup</strong>.</p>
+<p><img src="image.png" alt="Alt text"></p>
+<p>Run the Git installer.</p>
+<p><img src="image-1.png" alt="Alt text"></p>
+<p>The only change you should make from the default installation options is to <strong>&quot;Use Notepad as Git's default editor&quot;</strong>.</p>
+<p><img src="image-2.png" alt="Alt text"></p>
+<p>Once Git is installed, make sure you can access the <strong>Git Bash</strong> program. This will be the terminal we will use for the git tutorial.
+<img src="image-3.png" alt="Alt text"></p>
+<h2>Mac</h2>
+<p>Please download Homebrew, a program for Mac that makes downloading software development tools easier, by following the instructions at this link: <a href="https://brew.sh">https://brew.sh</a></p>
+<p>Open a Terminal window, and copy paste the following and run:</p>
+<p><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code></p>
+<p>This process will prompt for your password, and may install XCode. That is expected. After it completes, it will display something like the following:</p>
+<pre><code>==&gt; Next steps:
+- Run these two commands in your terminal to add Homebrew to your PATH:
+
+    (echo; echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;') &gt;&gt; /Users/&lt;YOUR USERNAME&gt;/.zprofile
+    eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
+
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+</code></pre>
+<p>Copy the two commands given and run them. This installs Homebrew, which can be accessed by running the <code>brew</code> command in the Terminal.</p>
+<p>Once Homebrew is installed, please run: <code>brew install git</code>. This will install git.</p>
+<h3>Can't find Terminal on a Mac?</h3>
+<p>It'll be under Applications &gt; Utilities &gt; Terminal</p>
+<h1>Github Account Setup</h1>
+<p>We will create a Github account, which will help you use Git to collaborate with other people at Fordham and in the workplace. Github is also a great place to showcase your professional skills.</p>
+<p>To create a Github account, go to <a href="https://github.com/signup">Github.com</a> and click on sign up.</p>
+<p><strong>Some notes</strong>:</p>
+<ul>
+<li>Use an email that you will have consistent access to. Fordham email is good, a professional email is better.</li>
+<li>Your username should reflect you, and be something you're comfortable using in the workplace. Don't have it be something like &quot;funkymonkey123&quot;.</li>
+</ul>
+<p>Once you've made your Github account, you will need a <strong>Personal Access Token</strong>. This is because Github does not allow password based authentication anymore.</p>
+<p>From your GitHub account, go to <strong>Settings → Developer Settings → Personal Access Token → Generate New Token (classic) →</strong> (Give your password) <strong>→</strong> Check all boxes for &quot;repo&quot; and set the Expiration to &quot;No Expiration&quot; <strong>→</strong> click <strong>Generate token → Copy the generated Token</strong>, it will be something like <code>ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta</code>. This is your Github Personal Access Token.</p>
+<p>Now follow the below method based on your operating system:</p>
+<h2>Windows</h2>
+<p>Go to Credential Manager from <strong>Control Panel → Windows Credentials → find</strong> <code>git:https://github.com</code> <strong>→ Edit →</strong> On Password replace with with your <strong>Github Personal Access Token</strong> →** You are Done</p>
+<p>If you don’t find <code>git:https://github.com</code> → Click on <strong>Add a generic credential →</strong> Internet address will be <code>git:https://github.com</code>. You need to type in your username, and the password will be your <strong>Github Personal Access Token</strong> → Click Ok and you are done.</p>
+<h2>MacOS</h2>
+<p>Temporarily save this password in a secure note location. You will be prompted for it in the Terminal when running commands that interact with Github.</p>
+<p>When running commands that interact with Github, you will be asked for your Github username and then your password. Instead of your Github password, use your <strong>Github Personal Access Token</strong>.</p>
+<hr>
+<p>Once your Github account is setup, run the following commands in your Terminal.</p>
+<pre><code>git config --global user.name &quot;YOUR GITHUB USERNAME&quot;
+git config --global user.email &quot;YOUR GITHUB EMAIL&quot;
+</code></pre>
+<p>This associates the commands you run on your computer to your Github account.</p>
